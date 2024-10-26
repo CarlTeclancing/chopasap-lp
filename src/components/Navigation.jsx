@@ -5,6 +5,7 @@ import Relay from '../pages/Services';
 
 
 export default function Navigation() {
+  
   return (
     <div className='navigation'>
         <img src={logo} alt="logo" className='logo'/>
@@ -16,7 +17,9 @@ export default function Navigation() {
                 <Link to="/blog">Blog</Link> 
             
         </div>
-        <button className="btn-border">Contact </button>
+        
+          <Link className="btn-border" to="/contact">Contact</Link>
+        
     </div>
   )
 }

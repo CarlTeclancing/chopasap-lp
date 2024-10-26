@@ -129,6 +129,10 @@ h2{
   font-weight: bolder;
   width: 200px;
   height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 .btn{
   background-color: #0C513F;
@@ -296,4 +300,42 @@ h4{
   font-weight: 900;
   margin: 24px;
   font-size: 24px;
+}
+.contact{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgb(255, 255, 255);
+  padding: 24px;
+  border-radius: 12px;
+}
+.contact input, textarea{
+  margin-top: 12px;
+  border: 1px solid #0c513f27;
+  height: 44px;
+  padding: 6px;
+  width: 96%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+label{
+  font-weight: 700;
+  margin-top: 12px;
+}
+.btn-ls{
+  margin-top: 60px;
+  background-color: #0C513F;
+  color: white;
+  height: 64px;
+  width: 100%;
+  border-radius: 6px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import FAQ from '../components/Faq'
 import cardImg from '../assets/cardImg.png'
+import Footer from '../components/Footer';
 
 export default function Services() {
   return (
@@ -41,6 +42,7 @@ export default function Services() {
       </div>
 
       <FAQ />
+      <Footer />
 
     </div>
     
