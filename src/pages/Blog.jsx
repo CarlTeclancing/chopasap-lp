@@ -37,7 +37,7 @@ export default function Blog() {
             <img src={item.image} alt={item.title} />
             <h4>{item.title}</h4>
             <p className='p-t-4'>{item.description}</p>
-            <Link to="/blogpost" state={{ item }} className="btn">
+            <Link to="/blogpost" state={{ item }} className="btn-100">
               Read More
             </Link>
           </div>

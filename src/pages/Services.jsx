@@ -12,7 +12,7 @@ export default function Services() {
       <div className="container">
           <h1>Our Services</h1>
           <div className='narrow'>
-                    <p>Order meals and have them delivered to you within minutes from a wide
+                    <p className='para-1'>Order meals and have them delivered to you within minutes from a wide
     variety of restaurants ranging from African to Continental
     cuisines to satisfy your cravings.</p>
           </div>
@@ -23,21 +23,21 @@ export default function Services() {
           <img src={cardImg} alt="" />
           <h4>Become a Chop ASAP Brand Ambassado</h4>
           <p className='p-t-4'>Are you an influential, high-flying student with a passion for comfort, ease, and strategic problem-solving? You’re the ...</p>
-          <button className="btn">Read More</button>
+          <button className="btn-100">Read More</button>
         </div>
 
         <div className="card">
           <img src={cardImg} alt="" />
           <h4>Become a Chop ASAP Brand Ambassado</h4>
           <p className='p-t-4'>Are you an influential, high-flying student with a passion for comfort, ease, and strategic problem-solving? You’re the ...</p>
-          <button className="btn">Read More</button>
+          <button className="btn-100">Read More</button>
         </div>
 
         <div className="card">
           <img src={cardImg} alt="" />
           <h4>Become a Chop ASAP Brand Ambassado</h4>
           <p className='p-t-4'>Are you an influential, high-flying student with a passion for comfort, ease, and strategic problem-solving? You’re the ...</p>
-          <button className="btn">Read More</button>
+          <button className="btn-100">Read More</button>
         </div>
       </div>
 

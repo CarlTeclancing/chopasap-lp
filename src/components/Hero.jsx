@@ -7,6 +7,7 @@ import textHightlite from '../assets/textHightlite.png'
 import heroimg2 from '../assets/heroimg2.png'
 import FAQ from './Faq'
 
+
 export default function Hero() {
   return (
     <div className='container pt-14'>
@@ -29,9 +30,8 @@ export default function Hero() {
             </div>
             <h2>Download ChopAsap Now</h2>
             <div className='narrow'>
-                <p>Order meals and have them delivered to you within minutes from a wide
-variety of restaurants ranging from African to Continental
-cuisines to satisfy your cravings.</p>
+                <p className='para-1'>Order meals and have them delivered to you within minutes from a wide
+variety of restaurants ranging from African to Continental cuisines to satisfy your cravings.</p>
 </div>
 <img src={heroImage} alt="hero image" className='img-hero' />
             
@@ -47,6 +47,7 @@ cuisines to satisfy your cravings.</p>
 
         <div className="flex-row">
             <div className="row">
+                
                 <h2 className='stroked-text'>Do</h2>
                 <h2 className='stroked-text'>You</h2>
                 <h2 className='stroked-text'>Own A</h2>

@@ -13,7 +13,7 @@ export default function BlogPost() {
     <div>
       <Navigation />
       <h1>{item.title}</h1>
-      <img src={item.image} alt={item.title} />
+      <img className='img-fluid' src={item.image} alt={item.title} />
       <p>{item.description}</p>
       <Footer />
     </div>

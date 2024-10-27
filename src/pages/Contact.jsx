@@ -23,14 +23,14 @@ export default function Contact() {
             <div className="container">
                 <form action="" className='contact'>
                     <label htmlFor="uname">Name</label>
-                    <input type="text" id="name" name="uname" placeholder="Your name.." />
+                    <input type="text" id="name" name="uname" required placeholder="Your name.." />
 
                     <label htmlFor="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your email.." />
+                    <input type="email" id="email" name="email" required placeholder="Your email.." />
 
                     <label htmlFor="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Write something.." style={{height: '200px'}}></textarea>
-                    <button onClick={FormSubmit} className="btn-ls" type="button">
+                    <textarea id="message" name="message" required placeholder="Write something.." style={{height: '200px'}}></textarea>
+                    <button onClick={FormSubmit} className="btn-ls" type="submit">
                         Submit
                     </button>
                 </form>
