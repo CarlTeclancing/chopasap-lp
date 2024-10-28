@@ -11,10 +11,10 @@ export default function Footer() {
 
                 <h4>Company</h4>
                   
-                    <Link className='nav-ell' to="/about">About Us</Link>
-                    <Link className='nav-ell' to="/blog">Blog</Link>
-                    <Link className='nav-ell' to="/careeres">Carrers</Link>
-                    <Link className='nav-ell' to="/partners">Partners</Link>
+                    <a className='nav-ell' href="/about">About Us</a>
+                    <a className='nav-ell' href="/blog">Blog</a>
+                    <a className='nav-ell' href="/careeres">Carrers</a>
+                    <a className='nav-ell' href="https://www.crestlancing.com/partners" target='blank'>Partners</a>
 
                 
                 </div>
@@ -22,10 +22,10 @@ export default function Footer() {
                 <h4>Support</h4>
 
                 
-                    <a href='#' className='nav-ell'>Contact Us</a>
-                    <a href='#' className='nav-ell'>Help Center</a>
-                    <a href='#' className='nav-ell'>Terms of Service</a>
-                    <a href='#' className='nav-ell'>Privacy Policy</a>
+                    <a href='/contact' className='nav-ell'>Contact Us</a>
+                    <a href='/faqs' className='nav-ell'>Help Center</a>
+                    <a href='/terms' className='nav-ell'>Terms of Service</a>
+                    <a href='/privacy-policy' className='nav-ell'>Privacy Policy</a>
                 
                 </div>
                 <div className="col-3">
@@ -38,10 +38,10 @@ export default function Footer() {
                 <div className="col-3">
                 <h4>Follow Us</h4>
                 
-                    <a href='#' className='nav-ell'>Facebook</a>
-                    <a href='#' className='nav-ell'>Twitter</a>
-                    <a href='#' className='nav-ell'>Instagram</a>
-                    <a href='#' className='nav-ell'>LinkedIn</a>
+                    <a href='https://www.instagram.com/chop_asap?igsh=MnhzZTZpaDRodjgz' target='blank' className='nav-ell'>Facebook</a>
+                    <a href='https://www.instagram.com/chop_asap?igsh=MnhzZTZpaDRodjgz' target='blank' className='nav-ell'>Twitter</a>
+                    <a href='https://www.instagram.com/chop_asap?igsh=MnhzZTZpaDRodjgz' target='blank' className='nav-ell'>Instagram</a>
+                    <a href='https://www.instagram.com/chop_asap?igsh=MnhzZTZpaDRodjgz' target='blank' className='nav-ell'>LinkedIn</a>
                 
                 </div>
             </div>
