@@ -11,7 +11,7 @@ export default function Footer() {
                 
                     <a href='#' className='nav-ell'>About Us</a>
                     <a href='#' className='nav-ell'>Blog</a>
-                    <a href='#' className='nav-ell'>Careers</a>
+                    <a href='/careeres' className='nav-ell'>Careers</a>
                     <a href='#' className='nav-ell'>Partners</a>
                 
                 </div>

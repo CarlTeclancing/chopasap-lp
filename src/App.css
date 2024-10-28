@@ -15,7 +15,7 @@ body{
   font-size: 24px
 }
 #root {
-  max-width: 1460px;
+  max-width: 98%;
   text-align: center;
   background-color: #FFF3CC;
   display: flex;
@@ -24,7 +24,7 @@ body{
   flex-direction: column;
 }
 .nav-container{
-  max-width: 1460px;
+  max-width: 100%;
   background-color: #FFF3CC;
   height: auto;
   display: flex;
@@ -41,7 +41,7 @@ body{
   display: none;
 }
 .navigation{
-  width: 1460px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -280,9 +280,9 @@ span{
   font-family: Arial, sans-serif;
 }
 .card{
-  width: 400px;
+  width: 320px;
   padding: 12px;
-  margin: 24px;
+  margin: 12px;
   background-color: white;
   border-radius: 12px;
   display: flex;
@@ -291,10 +291,11 @@ span{
 }
 .card:hover{
   transition-duration: 1s;
-  width: 400px;
-  padding: 12px;
-  background-color: white;
   box-shadow: -12px 12px rgba(1, 9, 55, 0.1);
+  width: 320px;
+  padding: 12px;
+  margin: 12px;
+  background-color: white;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -374,5 +375,7 @@ label{
   justify-content: space-around;
   cursor: pointer;
 }
-
+.img{
+  width: 80%;
+}
 

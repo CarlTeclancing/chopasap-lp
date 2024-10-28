@@ -1,5 +1,5 @@
 /* Small Devices (up to 768px) */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .nav-container{
       padding: 0px;
     }

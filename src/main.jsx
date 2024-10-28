@@ -12,6 +12,7 @@ import Faqs from './pages/Faqs.jsx';
 import Blog from './pages/Blog.jsx';
 import Contact from './pages/Contact.jsx';
 import BlogPost from './pages/blog/BlogPost.jsx';
+import Careeres from './pages/careeres.jsx';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "blogpost",
     element: <BlogPost />,
+  },
+  {
+    path: "careeres",
+    element: <Careeres />,
   },
 ]);
 
