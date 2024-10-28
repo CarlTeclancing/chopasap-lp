@@ -8,21 +8,19 @@ export default function Footer() {
             <div className="container">
             <div className="footer">
                 <div className="col-3">
-<<<<<<< HEAD
-                
-=======
+
                 <h4>Company</h4>
                   
                     <Link className='nav-ell' to="/about">About Us</Link>
                     <Link className='nav-ell' to="/blog">Blog</Link>
-                    <Link className='nav-ell' to="/carrers">Carrers</Link>
+                    <Link className='nav-ell' to="/careeres">Carrers</Link>
                     <Link className='nav-ell' to="/partners">Partners</Link>
 
                 
                 </div>
                 <div className="col-3">
                 <h4>Support</h4>
->>>>>>> e268b6d4fd9514bc062563753d3d96168ba69cb5
+
                 
                     <a href='#' className='nav-ell'>Contact Us</a>
                     <a href='#' className='nav-ell'>Help Center</a>

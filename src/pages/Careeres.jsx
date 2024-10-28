@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import FAQ from '../components/Faq'
 import cardImg from '../assets/cardImg.png'
+import CardComponent from '../components/CardComponent'
 
 export default function Careeres() {
   return (
@@ -32,7 +33,7 @@ export default function Careeres() {
           <button className="btn-100">Read More</button>
         </div>
       </div>
-
+      <CardComponent />
       <FAQ />
 
 
