@@ -9,18 +9,12 @@ export default function Footer() {
             <div className="footer">
                 <div className="col-3">
                 <h4>Company</h4>
-<<<<<<< HEAD
+                  
                     <Link className='nav-ell' to="/about">About Us</Link>
                     <Link className='nav-ell' to="/blog">Blog</Link>
                     <Link className='nav-ell' to="/carrers">Carrers</Link>
                     <Link className='nav-ell' to="/partners">Partners</Link>
-=======
-                
-                    <a href='#' className='nav-ell'>About Us</a>
-                    <a href='#' className='nav-ell'>Blog</a>
-                    <a href='/careeres' className='nav-ell'>Careers</a>
-                    <a href='#' className='nav-ell'>Partners</a>
->>>>>>> refs/remotes/origin/main
+
                 
                 </div>
                 <div className="col-3">
