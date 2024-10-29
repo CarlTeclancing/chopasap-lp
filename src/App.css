@@ -416,3 +416,7 @@ div{
 .card-content h2{
   margin-top: px;
 }
+.container-narrow{
+  width: 60%;
+  text-align: left;
+}

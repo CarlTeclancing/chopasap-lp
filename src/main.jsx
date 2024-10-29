@@ -13,6 +13,8 @@ import Blog from './pages/Blog.jsx';
 import Contact from './pages/Contact.jsx';
 import BlogPost from './pages/blog/BlogPost.jsx';
 import Careeres from './pages/careeres.jsx';
+import Terms from './pages/Terms.jsx';
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +48,14 @@ const router = createBrowserRouter([
   {
     path: "careeres",
     element: <Careeres />,
+  },
+  {
+    path: "terms",
+    element: <Terms />,
+  },
+  {
+    path: "privacy-policy",
+    element: <PrivacyPolicy />,
   },
 ]);
 
