@@ -11,7 +11,7 @@ export default function Footer() {
 
                 <h4>Company</h4>
                   
-                    <a className='nav-ell' href="/about">About Us</a>
+                    <a className='nav-ell' href="/contact">About Us</a>
                     <a className='nav-ell' href="/blog">Blog</a>
                     <a className='nav-ell' href="/careeres">Carrers</a>
                     <a className='nav-ell' href="https://www.crestlancing.com/partners" target='blank'>Partners</a>

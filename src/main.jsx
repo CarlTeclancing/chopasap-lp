@@ -12,9 +12,10 @@ import Faqs from './pages/Faqs.jsx';
 import Blog from './pages/Blog.jsx';
 import Contact from './pages/Contact.jsx';
 import BlogPost from './pages/blog/BlogPost.jsx';
-import Careeres from './pages/careeres.jsx';
+import Careeres from './pages/Careeres.jsx';
 import Terms from './pages/Terms.jsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
+import errorElement from './components/errorElement.jsx';
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
   {
     path: "privacy-policy",
     element: <PrivacyPolicy />,
+  },
+  {
+    path: "errorElement",
+    element: <errorElement />,
   },
 ]);
 
