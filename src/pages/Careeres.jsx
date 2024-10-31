@@ -33,7 +33,11 @@ export default function Careeres() {
           <button className="btn-100">Read More</button>
         </div>
       </div>
-      <CardComponent />
+      <CardComponent 
+        image={cardImg} 
+        title="hello test " 
+        content="test content"
+       />
       <FAQ />
 
 
