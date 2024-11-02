@@ -23,6 +23,7 @@ export default function Hero() {
                 Download on App Store
             </button>
         </div>
+        <img src={heroImage} alt="hero image" className='img-hero' />
         <div className="container">
             <div>
                 <span className='active'>Customer</span>
@@ -33,7 +34,7 @@ export default function Hero() {
                 <p className='para-1'>Order meals and have them delivered to you within minutes from a wide
 variety of restaurants ranging from African to Continental cuisines to satisfy your cravings.</p>
 </div>
-<img src={heroImage} alt="hero image" className='img-hero' />
+
             
         </div>
         <div className="flex-row">
