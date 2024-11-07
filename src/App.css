@@ -421,3 +421,6 @@ div{
   width: 60%;
   text-align: left;
 }
+.nav-overlay{
+  display: none;
+}
