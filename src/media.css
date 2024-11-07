@@ -180,12 +180,11 @@
   justify-content: center;
   flex-direction: column;
   position: fixed;
-  background-color: white;
+  background-color: #FFF3CC;
   height: 100%;
   width: 100%;
   z-index: 100;
   top: 0px;
-
 }
 .nav-overlay-content{
   display: flex;
@@ -200,7 +199,7 @@
   text-decoration: none;
   color: black;
   font-weight: bolder;
-  color: #FFCF70;
+  color: #373737;
   margin: 12px;
 }
 .relative{
@@ -211,7 +210,8 @@
 }
 .none{
   display: none;
-  transition: 0.5s;
+  transition: 1s;
+  transition-delay: 0.4s;
 }
   }
   
