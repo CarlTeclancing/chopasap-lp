@@ -209,6 +209,10 @@
   right: 24px;
 
 }
+.none{
+  display: none;
+  transition: 0.5s;
+}
   }
   
   
