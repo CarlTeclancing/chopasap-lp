@@ -9,7 +9,7 @@ import chopasapLogo from '../assets/chopasapLogo.png';
 
 export default function Navigation() {
 
-  const [action, setAction] = useState('open');
+  const [action, setAction] = useState('close');
   return (
     <div className='nav-container'>
       <div className='navigation'>
