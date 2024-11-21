@@ -33,6 +33,7 @@ export default function Careeres() {
           <button className="btn-100">Read More</button>
         </div>
       </div>
+      //passing props to the card component 
       <CardComponent 
         image={cardImg} 
         title="hello test " 

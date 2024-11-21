@@ -428,3 +428,38 @@ div{
 .none{
   display: none;
 }
+/*animated text*/
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 230px;
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-text {
+  animation: fadeInOut 2s ease-in-out infinite;
+  position: absolute;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}

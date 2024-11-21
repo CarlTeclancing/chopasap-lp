@@ -73,7 +73,11 @@ export default function Contact() {
                         placeholder="Write something.."
                         style={{ height: '200px' }}
                     ></textarea>
-                    <input className="btn-ls" type="submit" value="Submit" />
+                    <input 
+                        className="btn-ls" 
+                        type="submit" 
+                        value="Submit" 
+                    />
 
                 </form>
             </div>

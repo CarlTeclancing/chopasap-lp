@@ -7,6 +7,7 @@ import cardImg from '../assets/cardImg.png'
 export default function CardComponent(props) {
   
   const {image, title, content} = props
+  
 
   
   return (

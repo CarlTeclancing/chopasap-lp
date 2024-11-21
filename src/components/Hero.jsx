@@ -6,12 +6,15 @@ import imgNotification from '../assets/imgNotification.png'
 import textHightlite from '../assets/textHightlite.png'
 import heroimg2 from '../assets/heroimg2.png'
 import FAQ from './Faq'
+import AnimatedText from './AnimatedText'
+
 
 
 export default function Hero() {
   return (
     <div className='container pt-14'>
-        <h1>Have You Eaten?</h1>
+        <AnimatedText />
+        <p>Craving a meal? Our app lets you order delicious food online and delivers it to your doorstep in under 30 minutes—anywhere in Cameroon</p>
         <div className="btn-container">
             <button className='btn'>
                 <img src={playstoreLogo} alt="" />
