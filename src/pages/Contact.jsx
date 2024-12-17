@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { db, collection, addDoc } from '../../firebase';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import ScrollToTop from '../ScrollToTop'
 
 export default function Contact() {
     const [name, setName] = useState('');
@@ -38,6 +39,7 @@ export default function Contact() {
     return (
         <div>
             <Navigation />
+            <ScrollToTop />
             <h1>Contact Us</h1>
             <div className="container">
                 <form className='contact' onSubmit={handleSubmit}>

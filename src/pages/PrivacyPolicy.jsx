@@ -1,11 +1,13 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import ScrollToTop from '../ScrollToTop'
 
 export default function PrivacyPolicy() {
   return (
 
     <div className='container'>
+      <ScrollToTop />
       <Navigation />
       <h1>Privacy Policy</h1>
       <div className='container-narrow'>

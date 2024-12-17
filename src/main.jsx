@@ -17,6 +17,8 @@ import Terms from './pages/Terms.jsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
 import errorElement from './components/errorElement.jsx';
 
+
+
 const router = createBrowserRouter([
   {
     path: "/",
