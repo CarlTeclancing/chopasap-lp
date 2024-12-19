@@ -52,11 +52,11 @@ variety of restaurants ranging from African to Continental cuisines to satisfy y
         <div className="flex-row">
             <div className="row">
                 
-                <h2 className='stroked-text'>Do</h2>
-                <h2 className='stroked-text'>You</h2>
+                <h2 className='stroked-text'>Do You</h2>
+                <h2 className='stroked-text'></h2>
                 <h2 className='stroked-text'>Own A</h2>
-                <h2 className='stroked-text'>Restaurant ?</h2>
-                <div className="btn-container">
+                <h2 className='stroked-text'>Restaurant?</h2>
+                
                     <button className='btn'>
                         <img src={playstoreLogo} alt="" />
                         Download on Google Play
@@ -66,7 +66,7 @@ variety of restaurants ranging from African to Continental cuisines to satisfy y
                         <img src={appleLogo} alt="" />
                         Download on App Store
                     </button>
-                </div>
+                
             </div>
             <div className="row">
                 <img src={heroimg2} className='img-full' alt="" />
