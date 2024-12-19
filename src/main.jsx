@@ -18,6 +18,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
 import errorElement from './components/errorElement.jsx';
 import SkeletonLoader from './components/SeletonLoader.jsx';
 import Layout from './components/Layout.jsx';
+import Ambasador from './pages/Ambasador.jsx'
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
       {
         path: "privacy-policy",
         element: <PrivacyPolicy />,
+      },
+      {
+        path: "become-ambassador",
+        element: <Ambasador />,
       },
     ],
   },
