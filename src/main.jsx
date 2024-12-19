@@ -20,6 +20,8 @@ import SkeletonLoader from './components/SeletonLoader.jsx';
 import Layout from './components/Layout.jsx';
 import Ambasador from './pages/Ambasador.jsx'
 
+
+
 const router = createBrowserRouter([
   {
     path: "/",

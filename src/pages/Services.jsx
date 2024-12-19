@@ -4,12 +4,14 @@ import FAQ from '../components/Faq'
 import cardImg from '../assets/cardImg.png'
 import Footer from '../components/Footer';
 import heroImg from '../assets/heroImage.png'
+import ScrollToTop from '../ScrollToTop'
 
 export default function Services() {
   return (
 
     <div>
       <Navigation />
+      <ScrollToTop />
       <div className="container">
           <h1>Our Services</h1>
           <div className='narrow'>

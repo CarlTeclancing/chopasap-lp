@@ -9,14 +9,13 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 24px;
   scroll-behavior: smooth;
 }
 .bi{
   font-size: 24px
 }
 #root {
-  max-width: 100%;
+  max-width: 95%;
   text-align: center;
   background-color: #FFF3CC;
   display: flex;

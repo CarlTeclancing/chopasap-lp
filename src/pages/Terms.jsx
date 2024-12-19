@@ -1,11 +1,14 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import ScrollToTop from '../ScrollToTop'
 
 export default function Terms() {
   return (
     <div className='container'>
+      
       <Navigation />
+      <ScrollToTop />
       <h1>Terms And Conditions</h1>
       <div className="container-narrow">
         <h3>Introduction</h3>

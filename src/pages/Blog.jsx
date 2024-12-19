@@ -4,6 +4,7 @@ import cardImg from '../assets/cardImg.png';
 import FAQ from '../components/Faq';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
+import ScrollToTop from '../ScrollToTop'
 
 export default function Blog() {
   const items = [
@@ -30,6 +31,7 @@ export default function Blog() {
   return (
     <div>
       <Navigation />
+      <ScrollToTop />
       <h1>Chop Asap Blog</h1>
       <div className="row-narrow">
         {items.map((item) => (

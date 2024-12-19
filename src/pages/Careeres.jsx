@@ -4,11 +4,13 @@ import Footer from '../components/Footer'
 import FAQ from '../components/Faq'
 import cardImg from '../assets/cardImg.png'
 import CardComponent from '../components/CardComponent'
+import ScrollToTop from '../ScrollToTop'
 
 export default function Careeres() {
   return (
     <div>
         <Navigation />
+        <ScrollToTop />
         <h1>Join Chop ASAP</h1>
         <div className="row-narrow">
 
