@@ -7,16 +7,19 @@ import textHightlite from '../assets/textHightlite.png'
 import heroimg2 from '../assets/heroimg2.png'
 import FAQ from './Faq'
 import AnimatedText from './AnimatedText'
+import redirectEx from './functions'
 
 
 
 export default function Hero() {
+
+
   return (
     <div className='container pt-14'>
         <AnimatedText />
         <p>Craving a meal? Our app lets you order delicious food online and delivers it to your doorstep in under 30 minutes—anywhere in Cameroon</p>
         <div className="btn-container">
-            <button className='btn'>
+            <button onClick={redirectEx} className='btn'>
                 <img src={playstoreLogo} alt="" />
                 Download on Google Play
             </button>
@@ -57,7 +60,7 @@ variety of restaurants ranging from African to Continental cuisines to satisfy y
                 <h2 className='stroked-text'>Own A</h2>
                 <h2 className='stroked-text'>Restaurant?</h2>
                 
-                    <button className='btn'>
+                    <button onClick={redirectEx} className='btn'>
                         <img src={playstoreLogo} alt="" />
                         Download on Google Play
                     </button>
