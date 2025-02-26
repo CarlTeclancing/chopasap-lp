@@ -1,0 +1,105 @@
+.dashboard-container{
+    width: 100%;
+    height: 100%;
+    background-color: #F4FCFF;
+    display: flex;
+}
+.side-bar{
+    width: 268px;
+    height: 100%;
+    background-color: #ffff;
+    padding-top: 54px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-section{
+    width: calc(100% - 268px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.navigation-element-active{
+    background-color: #FFAC0C;
+    width: 80%;
+    height: 58px;
+    margin-top: 16px;
+    padding-left: 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.navigation-element-disabled{
+    background-color: #ffae0c00;
+    width: 80%;
+    height: 58px;
+    margin-top: 16px;
+    padding-left: 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+hr{
+    margin-top: 80px;
+    border: none;
+}
+span{
+    margin-left: 12px;
+}
+
+/* topbar css styles*/
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.404);
+    scroll-behavior: smooth;
+    position: sticky;
+    top: 0;
+}
+.top-el{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search{
+    width: 343px;
+    height: 48px;
+    background-color: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.search input{
+    width:80%;
+    height: 100%;
+    border: none;
+}
+.search input:focus{
+    width:80%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+.circle{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+}

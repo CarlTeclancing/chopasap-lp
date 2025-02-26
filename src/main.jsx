@@ -18,7 +18,15 @@ import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
 import errorElement from './components/errorElement.jsx';
 import SkeletonLoader from './components/SeletonLoader.jsx';
 import Layout from './components/Layout.jsx';
-import Ambasador from './pages/Ambasador.jsx'
+import Ambasador from './pages/Ambasador.jsx';
+import Dashbaord from './pages/admin/inxex.jsx';
+import Stores from './pages/admin/stores/Stores.jsx';
+import Users from './pages/admin/users/Users.jsx';
+import Agents from './pages/admin/Agents/Agents.jsx';
+import Transactions from './pages/admin/transactions/Transactions.jsx';
+import Orders from './pages/admin/orders/Orders.jsx';
+import Settings from './pages/admin/settings/Settings.jsx';
+import Support from './pages/admin/support/support.jsx';
 
 
 
@@ -80,6 +88,38 @@ const router = createBrowserRouter([
   {
     path: "loading",
     element: <SkeletonLoader />,
+  },
+  {
+    path: "dashboard",
+    element: <Dashbaord />,
+  },
+  {
+    path: "dashboard/stores",
+    element: <Stores />,
+  },
+  {
+    path: "dashboard/users",
+    element: <Users />,
+  },
+  {
+    path: "dashboard/agents",
+    element: <Agents />,
+  },
+  {
+    path: "dashboard/transactions",
+    element: <Transactions />,
+  },
+  {
+    path: "dashboard/orders",
+    element: <Orders />,
+  },
+  {
+    path: "dashboard/support",
+    element: <Support />,
+  },
+  {
+    path: "dashboard/settings",
+    element: <Settings />,
   },
 ]);
 
