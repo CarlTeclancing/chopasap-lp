@@ -9,6 +9,9 @@ import chopasapLogo from '../assets/chopasapLogo.png';
 
 export default function Navigation() {
 
+  const redirectEx = () =>{
+    window.location.href = 'https://play.google.com/store/apps/dev?id=7360729639557371586'
+   } 
   const [action, setAction] = useState('close');
   return (
     <div className='nav-container'>

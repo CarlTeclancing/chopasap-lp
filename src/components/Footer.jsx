@@ -32,7 +32,7 @@ export default function Footer() {
                 <h4>Get the App</h4>
                 
                     <Link to='#' className='nav-ell'>Download on the App Store</Link>
-                    <Link to='#' className='nav-ell'>Get it on Google Play</Link>
+                    <Link to='https://play.google.com/store/apps/dev?id=7360729639557371586' className='nav-ell'>Get it on Google Play</Link>
                 
                 </div>
                 <div className="col-3">
