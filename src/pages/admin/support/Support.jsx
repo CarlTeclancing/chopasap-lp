@@ -1,5 +1,6 @@
 import React from 'react';
 import SideBar from '../components/SideBar';
+import TopNav from '../components/TopNav';
 
 function Support() {
   return (
@@ -7,6 +8,7 @@ function Support() {
         <SideBar />
 
         <div className="main-section">
+            <TopNav PageTitle={'Support'} />
 
         </div>
     </div>

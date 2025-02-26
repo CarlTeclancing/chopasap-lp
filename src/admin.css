@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 .dashboard-container{
     width: 100%;
     height: 100%;
@@ -47,12 +50,30 @@
     align-items: center;
     justify-content: flex-start;
 }
+.navigation-element-disabled:hover{
+    background-color: #ffae0c4d;
+    width: 80%;
+    height: 58px;
+    margin-top: 16px;
+    padding-left: 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
 hr{
     margin-top: 80px;
     border: none;
 }
 span{
     margin-left: 12px;
+    font-weight:500;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    color: #212121;
 }
 
 /* topbar css styles*/
@@ -102,4 +123,46 @@ span{
    align-items: center;
    justify-content: center;
    border-radius: 50%;
+}
+
+/* in main section for left side of the dashboard view*/
+.container-dashaord{
+    width: 95%;
+    padding-top: 32px;
+
+}
+.container-dashaord h3{
+    text-align: left;
+}
+table{
+    border: none;
+}
+.table{
+    width: 100%;
+    margin-top: 32px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 24px;
+    border: none;
+    outline: none;
+}
+th, td{
+    text-align: left;
+    height: 58px;
+    border: 0px solid black;
+    outline: none;
+    
+}
+.row-1{
+    background-color: #FFF7E7;
+    padding-left: 12px;
+}
+.row-2{
+    background-color: #F4FCFF;
+    padding-left: 12px;
+}
+.c{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
 }

@@ -15,7 +15,7 @@ import settings from '../../../assets/settings.png';
 function SideBar({ active }) {
 
     const location = useLocation()
-    const [state, setState] = useState('')
+    
 
     const [activeState, setActiveState] = useState(1);  // Fix the variable name here
 

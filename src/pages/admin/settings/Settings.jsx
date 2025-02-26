@@ -1,5 +1,6 @@
 import React from 'react';
 import SideBar from '../components/SideBar';
+import TopNav from '../components/TopNav';
 
 function Settings() {
   return (
@@ -7,6 +8,7 @@ function Settings() {
         <SideBar />
 
         <div className="main-section">
+            <TopNav PageTitle={'Dashboard'} />
 
         </div>
     </div>
