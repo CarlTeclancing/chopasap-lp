@@ -166,3 +166,14 @@ th, td{
     align-items: center;
     flex-direction: row;
 }
+
+.row-main{
+    width: 100%;
+    display: flex;
+}
+.row-l{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+}

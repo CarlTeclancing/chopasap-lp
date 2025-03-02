@@ -19,7 +19,7 @@ import errorElement from './components/errorElement.jsx';
 import SkeletonLoader from './components/SeletonLoader.jsx';
 import Layout from './components/Layout.jsx';
 import Ambasador from './pages/Ambasador.jsx';
-import Dashbaord from './pages/admin/inxex.jsx';
+import Dashbaord from './pages/admin/index.jsx';
 import Stores from './pages/admin/stores/Stores.jsx';
 import Users from './pages/admin/users/Users.jsx';
 import Agents from './pages/admin/Agents/Agents.jsx';
@@ -27,6 +27,7 @@ import Transactions from './pages/admin/transactions/Transactions.jsx';
 import Orders from './pages/admin/orders/Orders.jsx';
 import Settings from './pages/admin/settings/Settings.jsx';
 import Support from './pages/admin/support/support.jsx';
+import StoreDetails from './pages/admin/stores/StoreDetails.jsx';
 
 
 
@@ -79,6 +80,7 @@ const router = createBrowserRouter([
         path: "become-ambassador",
         element: <Ambasador />,
       },
+      
     ],
   },
   {
@@ -120,6 +122,10 @@ const router = createBrowserRouter([
   {
     path: "dashboard/settings",
     element: <Settings />,
+  },
+  {
+    path: "dashboard/stores/store-id=",
+    element: <StoreDetails />,
   },
 ]);
 
