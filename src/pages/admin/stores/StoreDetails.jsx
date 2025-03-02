@@ -1,4 +1,4 @@
-import React from 'react';
+
 import TopNav from '../components/TopNav';
 import SideBar from '../components/SideBar';
 import resto from '../../../assets/resto.png'
@@ -67,6 +67,35 @@ function StoreDetails() {
                         <h6>Price: 2000</h6>
                     </div> 
                 </div>
+                </div>
+
+                <div className={activeTab ==2?"orders-container":"none"}>
+
+                    <table className='table'>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>User Name</th>
+                        <th>Number</th>
+                        <th>Email</th>
+                        <th>Order Type</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr className='row-1'>
+                        <td className='c'>97593475779</td>
+                        <td>Achu with yello soup</td>
+                        <td>1500</td>
+                        <td>Yuven Carlson</td>
+                        <td>672765292</td>
+                        <td>info@crestlancing.com</td>
+                        <td><span className="active">Delivery</span></td>
+                        <td>Pending</td>
+                        {/* add function to change pending order to deliverd done manualy */}
+                        <td>Manual Delivered</td>
+                    </tr>
+                    </table>    
                 </div>
 
                 <div className={activeTab ==4?"user-container":"none"}>

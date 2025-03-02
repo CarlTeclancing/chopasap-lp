@@ -1,4 +1,4 @@
-import React from 'react';
+
 import SideBar from '../components/SideBar';
 import TopNav from '../components/TopNav';
 import image from '../../../assets/image.png'
@@ -11,7 +11,7 @@ function Users() {
         <div className="main-section">
             <TopNav PageTitle={'Users'} />
             <div className="container-dashaord">
-            <h3>Users Management</h3>
+            <h3>User Management</h3>
             <table className='table'>
               <tr>
                 <th>Store Name</th>
@@ -20,6 +20,7 @@ function Users() {
                 <th>City</th>
                 <th>Address</th>
                 <th>Country</th>
+                <th>Balance</th>
                 <th>Status</th>
               </tr>
               <tr className='row-1'>
@@ -29,6 +30,7 @@ function Users() {
                 <td>Yaounde</td>
                 <td>Yaounde Cameroon</td>
                 <td>Cameroon</td>
+                <td>2300 cfa</td>
                 <td><span className="active">Verified</span></td>
               </tr>
               <tr className='row-2'>
@@ -38,6 +40,7 @@ function Users() {
                 <td>Yaounde</td>
                 <td>Yaounde Cameroon</td>
                 <td>Cameroon</td>
+                <td>2300 cfa</td>
                 <td><span className="active">Verified</span></td>
               </tr>
             </table>
