@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { db, collection, addDoc } from '../../firebase';
+import React, { useState, useEffect } from "react";
+import { db } from "../../firebaseConfig";
+import {ref, set} from "firebase/database";
+import { uid } from "uid";
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ScrollToTop from '../ScrollToTop'
@@ -9,18 +11,15 @@ export default function Contact() {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        if (name === "name") setName(value);
-        if (name === "email") setEmail(value);
-        if (name === "message") setMessage(value);
-    };
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
+
+    const handleSubmit = async () => {
+        //event.preventDefault();
 
         try {
-            await addDoc(collection(db, "contacts"), {
+            const uuid = uid();
+            await set(ref(db, `/${uuid}`), {
+                uuid,
                 name,
                 email,
                 message,
@@ -31,8 +30,8 @@ export default function Contact() {
             setEmail('');
             setMessage('');
         } catch (error) {
-            console.error("Error adding document: ", error);
-            alert("There was an error submitting the form. Please try again.");
+            console.log("Error adding document: ", error);
+            alert("Error: " + error.message);
         }
     };
 
@@ -42,13 +41,13 @@ export default function Contact() {
             <ScrollToTop />
             <h1>Contact Us</h1>
             <div className="container">
-                <form className='contact' onSubmit={handleSubmit}>
+                <form className='contact'>
                     <label htmlFor="uname">Name</label>
                     <input
                         type="text"
                         id="name"
                         value={name}
-                        onChange={handleChange}
+                        onChange={(e) =>setName(e.target.value)}
                         name="name"
                         required
                         placeholder="Your name.."
@@ -59,7 +58,7 @@ export default function Contact() {
                         type="email"
                         id="email"
                         value={email}
-                        onChange={handleChange}
+                        onChange={(e) =>setEmail(e.target.value)}
                         name="email"
                         required
                         placeholder="Your email.."
@@ -69,17 +68,20 @@ export default function Contact() {
                     <textarea
                         id="message"
                         value={message}
-                        onChange={handleChange}
+                        onChange={(e) =>setMessage(e.target.value)}
                         name="message"
                         required
                         placeholder="Write something.."
                         style={{ height: '200px' }}
                     ></textarea>
-                    <input 
-                        className="btn-ls" 
-                        type="submit" 
+                    <button 
+                        className="btn-ls"  
                         value="Submit" 
-                    />
+                        onClick={handleSubmit}
+                    >
+                        Submit
+                    
+                    </button>
 
                 </form>
             </div>

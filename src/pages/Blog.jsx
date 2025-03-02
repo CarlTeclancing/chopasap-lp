@@ -11,7 +11,7 @@ export default function Blog() {
     {
       key: 1,
       image: cardImg,
-      title: "Beautiful Sunset",
+      title: "Become a Chop ASAP Ambassador",
       description: "A breathtaking view of the sunset over the mountains."
     },
     {
