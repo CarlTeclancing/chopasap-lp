@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    padding-bottom: 32px;
 }
 .navigation-element-active{
     background-color: #FFAC0C;
@@ -130,6 +130,7 @@ span{
     width: 95%;
     padding-top: 32px;
 
+
 }
 .container-dashaord h3{
     text-align: left;
@@ -170,10 +171,142 @@ th, td{
 .row-main{
     width: 100%;
     display: flex;
+    padding: 24px;
 }
 .row-l{
     display: flex;
+    width: 50%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: start;
+    padding-left: 24px;
+}
+.shop-img{
+    width: 40%;
+    height: 100%;
+}
+.flex-row-a{
+    display: flex;
+    width: 50%;
+    height: auto;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+}
+.active-a{
+    background-color: #ffae0c3e;
+    padding:12px 24px 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+}
+.text-left{
+    text-align: left;
+    font-size: 16px;
+    width: 80%;
+}
+.tabs{
+    display: flex;
+    width: 90%;
+    align-items: flex-start;
+    background-color:#ffae0c1d ;
+    border-radius: 12px;
+}
+.tab-el{
+    border: none;
+    background: none;
+    margin: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+.tab-el:hover{
+    border: none;
+    background: none;
+    margin: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+.tab-el-active{
+    transition-duration: 0.1s;
+    border: none;
+    background: none;
+    margin: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffae0c;
+    border-bottom: 4px solid #ffae0c;
+    padding: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+.products-container{
+    margin-top: 24px;
+    width: 90%;
+}
+.product{
+    width: 300px;
+    background-color:#ffae0c16;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.product-img{
+    width: 100%;
+
+}
+.user-container{
+    width: 90%;
+}
+.wallet{
+    width: 350px;
+    height: 200px;
+    background-color: #ffae0c54;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.w-100{
+    width: 100%;
+}
+.row-200{
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 10px;
+    height: 32px;
+}
+.secondary-btn{
+    border: 1px solid #D2202F;
+    color: #D2202F;
+    width: 100%;
+    background: none;
+    height: 54px;
+    border-radius: 12px;
+    margin-top: 42px;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.row-fluid{
+    width: 90%;
+    margin-top: 32px;
+}
+.h3{
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 24px;
+    text-align: left;
 }
