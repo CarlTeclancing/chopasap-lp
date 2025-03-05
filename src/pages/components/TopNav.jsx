@@ -1,7 +1,7 @@
 import React from 'react'
-import Search from '../../../assets/search.png'
-import Notification from '../../../assets/Notifications.png'
-import User from '../../../assets/User.png'
+import Search from '../../assets/search.png'
+import Notification from '../../assets/Notifications.png'
+import User from '../../assets/User.png'
 import { Link } from 'react-router-dom'
 
 export default function TopNav({PageTitle}) {
