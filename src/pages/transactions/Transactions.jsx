@@ -1,9 +1,9 @@
 
 import SideBar from '../components/SideBar';
 import TopNav from '../components/TopNav';
-import Wallet from '../../../assets/wallet.svg';
-import ArrowLeft from '../../../assets/arrow-right.png';
-import image from '../../../assets/image.png';
+import Wallet from '../../assets/wallet.svg';
+import ArrowLeft from '../../assets/arrow-right.png';
+import image from '../../assets/image.png';
 
 function Transactions() {
   return (

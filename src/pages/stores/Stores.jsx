@@ -1,7 +1,7 @@
 import React from 'react';
 import SideBar from '../components/SideBar';
 import TopNav from '../components/TopNav';
-import image from '../../../assets/image.png';
+import image from '../../assets/image.png';
 import { Link } from 'react-router-dom';
 
 function Stores() {

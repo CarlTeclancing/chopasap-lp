@@ -1,12 +1,12 @@
 
 import TopNav from '../components/TopNav';
 import SideBar from '../components/SideBar';
-import resto from '../../../assets/resto.png'
+import resto from '../../assets/resto.png'
 import { useState } from 'react';
-import image from '../../../assets/image.png';
+import image from '../../assets/image.png';
 import { Link } from 'react-router-dom';
-import Wallet from '../../../assets/wallet.svg';
-import ArrowLeft from '../../../assets/arrow-right.png';
+import Wallet from '../../assets/wallet.svg';
+import ArrowLeft from '../../assets/arrow-right.png';
 
 function StoreDetails() {
 

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import dashboardLogo from '../../../assets/dashboardLogo.png';
-import Home from '../../../assets/Home.png';
+import dashboardLogo from '../../assets/dashboardLogo.png';
+import Home from '../../assets/Home.png';
 import { useLocation } from 'react-router-dom';
-import usersicon from '../../../assets/3User.png';
-import category from '../../../assets/category.png';
-import chart from '../../../assets/chart.png';
-import bag from '../../../assets/bag.png';
-import chat from '../../../assets/chat.png';
-import settings from '../../../assets/settings.png';
+import usersicon from '../../assets/3User.png';
+import category from '../../assets/category.png';
+import chart from '../../assets/chart.png';
+import bag from '../../assets/bag.png';
+import chat from '../../assets/chat.png';
+import settings from '../../assets/settings.png';
 
 
 
