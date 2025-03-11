@@ -1,17 +1,11 @@
 import React from 'react';
-import SideBar from '../components/SideBar';
-import TopNav from '../components/TopNav';
+import DashboardLayout from '../../components/DashboardLayout';
 
 function Support() {
   return (
-    <div className='dashboard-container'>
-        <SideBar />
+    <DashboardLayout>
 
-        <div className="main-section">
-            <TopNav PageTitle={'Support'} />
-
-        </div>
-    </div>
+    </DashboardLayout>
   )
 }
 

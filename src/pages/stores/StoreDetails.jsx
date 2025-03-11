@@ -1,12 +1,10 @@
-
-import TopNav from '../components/TopNav';
-import SideBar from '../components/SideBar';
 import resto from '../../assets/resto.png'
 import { useState } from 'react';
 import image from '../../assets/image.png';
 import { Link } from 'react-router-dom';
 import Wallet from '../../assets/wallet.svg';
 import ArrowLeft from '../../assets/arrow-right.png';
+import DashboardLayout from '../../components/DashboardLayout';
 
 function StoreDetails() {
 
@@ -14,12 +12,8 @@ function StoreDetails() {
 
 
   return (
-    <div className='dashboard-container'>
-        <SideBar />
-
-        <div className="main-section">
-            <TopNav PageTitle={'Store Details'} />
-            <div className="container-dashaord">
+    <DashboardLayout>
+        <div className="container-dashaord">
                 {/* attarch variableto display store name in the place of chop asap */}
                 <h3>Store | Chop asap</h3>
                 <div className="section">
@@ -159,10 +153,7 @@ function StoreDetails() {
 
                  </div>
 
-            
-
-        </div>
-    </div>
+    </DashboardLayout>
   )
 }
 

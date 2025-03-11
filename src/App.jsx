@@ -5,15 +5,18 @@ import './App.css';
 import './media.css';
 import './admin.css'
 import Dashbaord from './pages';
+import GlobalContext from './context/GlobalContext';
 
 
 function App() {
   
 
   return (
-    <div>
-      <Dashbaord />
-    </div>
+    <GlobalContext>
+      <div>
+        <Dashbaord />
+      </div>
+    </GlobalContext>
   )
 }
 

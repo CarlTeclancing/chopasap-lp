@@ -1,19 +1,14 @@
 import React from 'react';
-import SideBar from '../components/SideBar';
-import TopNav from '../components/TopNav';
 import image from '../../assets/image.png'
 import { Link } from 'react-router-dom';
+import DashboardLayout from '../../components/DashboardLayout';
 
 
 function Agents() {
     
   return (
-    <div className='dashboard-container'>
-        <SideBar active={2} />
-
-        <div className="main-section">
-            <TopNav PageTitle={'Agents'} />
-            <div className="container-dashaord">
+    <DashboardLayout>
+      <div className="container-dashaord">
             <h3>Users Management</h3>
             <table className='table'>
               <tr>
@@ -53,8 +48,7 @@ function Agents() {
 
           </div>
 
-        </div>
-    </div>
+    </DashboardLayout>
   )
 }
 

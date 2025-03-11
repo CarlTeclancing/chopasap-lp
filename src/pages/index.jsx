@@ -1,17 +1,13 @@
 import React from 'react';
-import SideBar from './components/SideBar';
-import TopNav from './components/TopNav';
+import SideBar from '../components/SideBar';
+import TopNav from '../components/TopNav';
+import DashboardLayout from '../components/DashboardLayout';
 
 function Dashbaord() {
   return (
-    <div className='dashboard-container'>
-        <SideBar active={2} />
+    <DashboardLayout>
 
-        <div className="main-section">
-            <TopNav PageTitle={'Dashboard'} />
-
-        </div>
-    </div>
+    </DashboardLayout>
   )
 }
 

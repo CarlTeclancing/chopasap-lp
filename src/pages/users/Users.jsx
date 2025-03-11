@@ -1,16 +1,11 @@
 
-import SideBar from '../components/SideBar';
-import TopNav from '../components/TopNav';
 import image from '../../assets/image.png'
+import DashboardLayout from '../../components/DashboardLayout';
 
 function Users() {
   return (
-    <div className='dashboard-container'>
-        <SideBar active={2} />
-
-        <div className="main-section">
-            <TopNav PageTitle={'Users'} />
-            <div className="container-dashaord">
+    <DashboardLayout>
+      <div className="container-dashaord">
             <h3>User Management</h3>
             <table className='table'>
               <tr>
@@ -48,8 +43,7 @@ function Users() {
           </div>
 
 
-        </div>
-    </div>
+    </DashboardLayout>
   )
 }
 

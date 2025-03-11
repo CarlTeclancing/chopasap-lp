@@ -1,17 +1,12 @@
 import React from 'react';
-import SideBar from '../components/SideBar';
-import TopNav from '../components/TopNav';
 import image from '../../assets/image.png';
 import { Link } from 'react-router-dom';
+import DashboardLayout from '../../components/DashboardLayout';
 
 function Stores() {
   return (
-    <div className='dashboard-container'>
-        <SideBar active={2} />
-
-        <div className="main-section">
-          <TopNav PageTitle={'Stores'} />
-          <div className="container-dashaord">
+    <DashboardLayout>
+      <div className="container-dashaord">
             <h3>Store Management</h3>
             <table className='table'>
               <tr>
@@ -47,9 +42,7 @@ function Stores() {
             </table>
 
           </div>
-
-        </div>
-    </div>
+    </DashboardLayout>
   )
 }
 

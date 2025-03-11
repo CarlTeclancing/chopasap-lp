@@ -1,18 +1,13 @@
 
-import SideBar from '../components/SideBar';
-import TopNav from '../components/TopNav';
 import Wallet from '../../assets/wallet.svg';
 import ArrowLeft from '../../assets/arrow-right.png';
 import image from '../../assets/image.png';
+import DashboardLayout from '../../components/DashboardLayout';
 
 function Transactions() {
   return (
-    <div className='dashboard-container'>
-        <SideBar active={2} />
-
-        <div className="main-section">
-            <TopNav PageTitle={'Dashboard'} />
-            <div className="row-fluid">
+    <DashboardLayout>
+        <div className="row-fluid">
               <div className="collumn">
 
 
@@ -80,8 +75,7 @@ function Transactions() {
 
                  </div>
 
-        </div>
-    </div>
+    </DashboardLayout>
   )
 }
 

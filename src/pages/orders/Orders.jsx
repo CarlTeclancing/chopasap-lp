@@ -1,17 +1,13 @@
 
-import SideBar from '../components/SideBar';
-import TopNav from '../components/TopNav';
+import DashboardLayout from '../../components/DashboardLayout';
+
 
 function Orders() {
   return (
-    <div className='dashboard-container'>
-        <SideBar active={2} />
 
-        <div className="main-section">
-            <TopNav PageTitle={'Dashboard'} />
-
-            
-          <div className="orders-container">
+    <DashboardLayout>
+           
+           <div className="orders-container">
             <h3 className="h3">orders</h3>
 
           <table className='table'>
@@ -40,9 +36,8 @@ function Orders() {
           </tr>
           </table>    
           </div>
+    </DashboardLayout>
 
-        </div>
-    </div>
   )
 }
 
