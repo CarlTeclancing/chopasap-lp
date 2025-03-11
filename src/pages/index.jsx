@@ -5,9 +5,7 @@ import DashboardLayout from '../components/DashboardLayout';
 
 function Dashbaord() {
   return (
-    <DashboardLayout>
-
-    </DashboardLayout>
+    <h2>Welcome</h2>
   )
 }
 

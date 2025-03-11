@@ -18,7 +18,7 @@ const Layout = () => {
   return (
     <>
       {loading && <SkeletonLoader />}
-      {!loading && <Outlet />}
+      {/* {!loading && <Outlet />} */}
     </>
   );
 };

@@ -4,6 +4,9 @@ import {
   createBrowserRouter,
   RouterProvider,
   Outlet,
+  BrowserRouter,
+  Route,
+  Routes,
 } from 'react-router-dom';
 
 import App from './App.jsx';
@@ -16,6 +19,7 @@ import Orders from './pages/orders/Orders.jsx';
 import Settings from './pages/settings/Settings.jsx';
 import Support from './pages/support/support.jsx';
 import StoreDetails from './pages/stores/StoreDetails.jsx';
+import DashboardLayout from './components/DashboardLayout.jsx';
 
 
 
@@ -62,6 +66,13 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <BrowserRouter>
+    <Routes>
+      <Route element={<DashboardLayout />}>
+          <Route index element={<Dashbaord />} />
+          <Route path='stores' element={<Stores />} />
+      </Route>
+    </Routes>
+    </BrowserRouter>
   </StrictMode>
 );

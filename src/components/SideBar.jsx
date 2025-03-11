@@ -12,6 +12,7 @@ import settings from '../assets/settings.png';
 
 
 
+
 function SideBar({ active }) {
 
     const location = useLocation()
@@ -26,16 +27,16 @@ function SideBar({ active }) {
             <Link
                 onClick={() => setActiveState(1)}
                 state={activeState}
-                className={location.pathname === '/dashboard'? 'navigation-element-active' : 'navigation-element-disabled'}
-                to='/dashboard'>
+                className={location.pathname === '/'? 'navigation-element-active' : 'navigation-element-disabled'}
+                to='/'>
                 <img src={Home} alt="Home" />
                 <span>Dashboard</span>
             </Link>
 
             <Link
                 onClick={() => setActiveState(2)}
-                className={location.pathname === '/dashboard/stores'? 'navigation-element-active' : 'navigation-element-disabled'}
-                to='/dashboard/stores'>
+                className={location.pathname === '/stores'? 'navigation-element-active' : 'navigation-element-disabled'}
+                to='/stores'>
                 <img src={category} alt="Home" />
                 <span>Stores</span>
             </Link>

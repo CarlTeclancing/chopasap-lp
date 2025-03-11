@@ -5,7 +5,7 @@ import DashboardLayout from '../../components/DashboardLayout';
 
 function Stores() {
   return (
-    <DashboardLayout>
+
       <div className="container-dashaord">
             <h3>Store Management</h3>
             <table className='table'>
@@ -42,7 +42,7 @@ function Stores() {
             </table>
 
           </div>
-    </DashboardLayout>
+
   )
 }
 
