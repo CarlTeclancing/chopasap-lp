@@ -42,44 +42,44 @@ function SideBar({ active }) {
             </Link>
 
             <Link
-                className={location.pathname === '/dashboard/users'? 'navigation-element-active' : 'navigation-element-disabled'}
-                to='/dashboard/users'>
+                className={location.pathname === '/users'? 'navigation-element-active' : 'navigation-element-disabled'}
+                to='/users'>
                 <img src={usersicon} alt="Home" />
                 <span>Users</span>
             </Link>
 
             <Link
-                className={location.pathname === '/dashboard/agents'? 'navigation-element-active' : 'navigation-element-disabled'}
-                to='/dashboard/agents'>
+                className={location.pathname === '/agents'? 'navigation-element-active' : 'navigation-element-disabled'}
+                to='/agents'>
                 <img src={usersicon} alt="Home" />
                 <span>Delivery Agents</span>
             </Link>
 
             <Link
-                className={location.pathname === '/dashboard/transactions'? 'navigation-element-active' : 'navigation-element-disabled'}
-                to='/dashboard/transactions'>
+                className={location.pathname === '/transactions'? 'navigation-element-active' : 'navigation-element-disabled'}
+                to='/transactions'>
                 <img src={chart} alt="Home" />
                 <span>Transactions</span>
             </Link>
 
             <Link
-                className={location.pathname === '/dashboard/orders'? 'navigation-element-active' : 'navigation-element-disabled'}
-                to='/dashboard/orders'>
+                className={location.pathname === '/orders'? 'navigation-element-active' : 'navigation-element-disabled'}
+                to='/orders'>
                 <img src={bag} alt="Home" />
                 <span>Orders</span>
             </Link>
 
             <hr />
             <Link
-                className={location.pathname === '/dashboard/support'? 'navigation-element-active' : 'navigation-element-disabled'}
-                to='/dashboard/support'>
+                className={location.pathname === '/support'? 'navigation-element-active' : 'navigation-element-disabled'}
+                to='/support'>
                 <img src={chat} alt="Home" />
                 <span>Support</span>
             </Link>
 
             <Link
-                className={location.pathname === '/dashboard/settings'? 'navigation-element-active' : 'navigation-element-disabled'}
-                to='/dashboard/settings'>
+                className={location.pathname === '/settings'? 'navigation-element-active' : 'navigation-element-disabled'}
+                to='/settings'>
                 <img src={settings} alt="Home" />
                 <span>Settings</span>
             </Link>

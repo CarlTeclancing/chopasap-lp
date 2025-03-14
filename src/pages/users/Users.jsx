@@ -4,7 +4,7 @@ import DashboardLayout from '../../components/DashboardLayout';
 
 function Users() {
   return (
-    <DashboardLayout>
+    
       <div className="container-dashaord">
             <h3>User Management</h3>
             <table className='table'>
@@ -43,7 +43,7 @@ function Users() {
           </div>
 
 
-    </DashboardLayout>
+    
   )
 }
 

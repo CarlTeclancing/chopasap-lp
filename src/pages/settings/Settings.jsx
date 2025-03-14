@@ -3,9 +3,7 @@ import DashboardLayout from '../../components/DashboardLayout';
 
 function Settings() {
   return (
-    <DashboardLayout>
-
-    </DashboardLayout>
+    <h1>settigs page</h1>
   )
 }
 

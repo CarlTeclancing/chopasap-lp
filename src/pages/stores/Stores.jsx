@@ -27,7 +27,7 @@ function Stores() {
                 <td>Yaounde Cameroon</td>
                 <td>Cameroon</td>
                 <td><span className="active">Verified</span></td>
-                <td><Link to='/dashboard/stores/store-id='>View More</Link></td>
+                <td><Link to='/stores/store-id='>View More</Link></td>
               </tr>
               <tr className='row-2'>
                 <td className='c'><img src={image}/>Correct Chop</td>
@@ -37,7 +37,7 @@ function Stores() {
                 <td>Yaounde Cameroon</td>
                 <td>Cameroon</td>
                 <td><span className="active">Verified</span></td>
-                <td><Link to='/dashboard/stores/store-id='>View More</Link></td>
+                <td><Link to='/stores/store-id='>View More</Link></td>
               </tr>
             </table>
 

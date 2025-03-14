@@ -6,7 +6,7 @@ import DashboardLayout from '../../components/DashboardLayout';
 
 function Transactions() {
   return (
-    <DashboardLayout>
+    
         <div className="row-fluid">
               <div className="collumn">
 
@@ -75,7 +75,7 @@ function Transactions() {
 
                  </div>
 
-    </DashboardLayout>
+    
   )
 }
 

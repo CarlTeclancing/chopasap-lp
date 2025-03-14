@@ -71,6 +71,12 @@ createRoot(document.getElementById('root')).render(
       <Route element={<DashboardLayout />}>
           <Route index element={<Dashbaord />} />
           <Route path='stores' element={<Stores />} />
+          <Route path='agents' element={<Agents />} />
+          <Route path='transactions' element={<Transactions />} />
+          <Route path='orders' element={<Orders />} />
+          <Route path='users' element={<Users />} />
+          <Route path='settings' element={<Settings />} />
+          <Route path='support' element={<Support />} />
       </Route>
     </Routes>
     </BrowserRouter>

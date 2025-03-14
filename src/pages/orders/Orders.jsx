@@ -5,7 +5,7 @@ import DashboardLayout from '../../components/DashboardLayout';
 function Orders() {
   return (
 
-    <DashboardLayout>
+    
            
            <div className="orders-container">
             <h3 className="h3">orders</h3>
@@ -36,7 +36,7 @@ function Orders() {
           </tr>
           </table>    
           </div>
-    </DashboardLayout>
+    
 
   )
 }
