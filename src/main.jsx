@@ -77,6 +77,7 @@ createRoot(document.getElementById('root')).render(
           <Route path='users' element={<Users />} />
           <Route path='settings' element={<Settings />} />
           <Route path='support' element={<Support />} />
+          <Route path='stores/store-id=' element={<StoreDetails />} />
       </Route>
     </Routes>
     </BrowserRouter>

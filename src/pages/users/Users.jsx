@@ -1,12 +1,15 @@
 
 import image from '../../assets/image.png'
 import DashboardLayout from '../../components/DashboardLayout';
+import Table from '../../components/TableComponent';
 
 function Users() {
   return (
     
       <div className="container-dashaord">
             <h3>User Management</h3>
+
+            <Table />
             <table className='table'>
               <tr>
                 <th>Store Name</th>

@@ -12,7 +12,10 @@ function StoreDetails() {
 
 
   return (
-    <DashboardLayout>
+    
+
+    <>
+    
         <div className="container-dashaord">
                 {/* attarch variableto display store name in the place of chop asap */}
                 <h3>Store | Chop asap</h3>
@@ -152,8 +155,9 @@ function StoreDetails() {
                      
 
                  </div>
+    </>
 
-    </DashboardLayout>
+    
   )
 }
 
