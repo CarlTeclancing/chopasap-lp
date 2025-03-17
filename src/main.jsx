@@ -20,6 +20,7 @@ import Settings from './pages/settings/Settings.jsx';
 import Support from './pages/support/support.jsx';
 import StoreDetails from './pages/stores/StoreDetails.jsx';
 import DashboardLayout from './components/DashboardLayout.jsx';
+import GlobalContext from './context/GlobalContext.jsx';
 
 
 
@@ -66,20 +67,25 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-    <Routes>
-      <Route element={<DashboardLayout />}>
-          <Route index element={<Dashbaord />} />
-          <Route path='stores' element={<Stores />} />
-          <Route path='agents' element={<Agents />} />
-          <Route path='transactions' element={<Transactions />} />
-          <Route path='orders' element={<Orders />} />
-          <Route path='users' element={<Users />} />
-          <Route path='settings' element={<Settings />} />
-          <Route path='support' element={<Support />} />
-          <Route path='stores/store-id=' element={<StoreDetails />} />
-      </Route>
-    </Routes>
-    </BrowserRouter>
+    
+      <BrowserRouter>
+      <Routes>
+      
+        <Route element={<DashboardLayout />}>
+            <Route index element={<Dashbaord />} />
+            <Route path='stores' element={<Stores />} />
+            <Route path='agents' element={<Agents />} />
+            <Route path='transactions' element={<Transactions />} />
+            <Route path='orders' element={<Orders />} />
+            <Route path='users' element={<Users />} />
+            <Route path='settings' element={<Settings />} />
+            <Route path='support' element={<Support />} />
+            <Route path='stores/store-id=' element={<StoreDetails />} />
+        </Route>
+        
+      </Routes>
+      </BrowserRouter>
+
+    
   </StrictMode>
 );

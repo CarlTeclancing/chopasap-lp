@@ -1,49 +1,16 @@
-import React from 'react';
-import image from '../../assets/image.png';
-import { Link } from 'react-router-dom';
-import DashboardLayout from '../../components/DashboardLayout';
+import React, { useContext } from 'react';
+import { StoreContext } from '../../context/StoreContextProvider'; // ✅ import the context
+import Table from '../../components/TableComponent';
 
-function Stores() {
+const Stores = () => {
+  const { stores } = useContext(StoreContext); // ✅ use the context, not the provider
+
   return (
+    <div className="container-dashboard">
+      <h3>Store Management</h3>
+      <Table data={stores} />
+    </div>
+  );
+};
 
-      <div className="container-dashaord">
-            <h3>Store Management</h3>
-            <table className='table'>
-              <tr>
-                <th>Store Name</th>
-                <th>Email</th>
-                <th>Number</th>
-                <th>City</th>
-                <th>Address</th>
-                <th>Country</th>
-                <th>Status</th>
-                <th>Action</th>
-              </tr>
-              <tr className='row-1'>
-                <td className='c'><img src={image}/>Chop Asap</td>
-                <td>app@chopasap.com</td>
-                <td>672765292</td>
-                <td>Yaounde</td>
-                <td>Yaounde Cameroon</td>
-                <td>Cameroon</td>
-                <td><span className="active">Verified</span></td>
-                <td><Link to='/stores/store-id='>View More</Link></td>
-              </tr>
-              <tr className='row-2'>
-                <td className='c'><img src={image}/>Correct Chop</td>
-                <td>app@chopasap.com</td>
-                <td>672765292</td>
-                <td>Yaounde</td>
-                <td>Yaounde Cameroon</td>
-                <td>Cameroon</td>
-                <td><span className="active">Verified</span></td>
-                <td><Link to='/stores/store-id='>View More</Link></td>
-              </tr>
-            </table>
-
-          </div>
-
-  )
-}
-
-export default Stores
+export default Stores;
