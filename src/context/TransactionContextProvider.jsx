@@ -3,12 +3,12 @@ import { useState , createContext} from 'react';
 
 const TransactionContext = createContext()
 
-const TransactionContextProvider =( {childeren} )=> {
+const TransactionContextProvider =( {children} )=> {
 
     const [transactions, setTransactions] = useState(null)
   return (
     <TransactionContext.Provider value={{ transactions, setTransactions}}>
-        {childeren}
+        {children}
     </TransactionContext.Provider>
   )
 }

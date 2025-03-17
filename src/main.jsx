@@ -23,51 +23,9 @@ import DashboardLayout from './components/DashboardLayout.jsx';
 import GlobalContext from './context/GlobalContext.jsx';
 
 
-
-const router = createBrowserRouter([
-  
-  {
-    path: "dashboard",
-    element: <Dashbaord />,
-  },
-  {
-    path: "dashboard/stores",
-    element: <Stores />,
-  },
-  {
-    path: "dashboard/users",
-    element: <Users />,
-  },
-  {
-    path: "dashboard/agents",
-    element: <Agents />,
-  },
-  {
-    path: "dashboard/transactions",
-    element: <Transactions />,
-  },
-  {
-    path: "dashboard/orders",
-    element: <Orders />,
-  },
-  {
-    path: "dashboard/support",
-    element: <Support />,
-  },
-  {
-    path: "dashboard/settings",
-    element: <Settings />,
-  },
-  {
-    path: "dashboard/stores/store-id=",
-    element: <StoreDetails />,
-  },
-]);
-
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    
+    <GlobalContext>
       <BrowserRouter>
       <Routes>
       
@@ -85,7 +43,6 @@ createRoot(document.getElementById('root')).render(
         
       </Routes>
       </BrowserRouter>
-
-    
+    </GlobalContext> 
   </StrictMode>
 );

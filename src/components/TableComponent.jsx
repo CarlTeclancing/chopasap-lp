@@ -1,11 +1,11 @@
 import React from "react";
 
 const Table = ({ data }) => {
-
+ debugger
   if(!data || data.length ===0) return <p>No Data Available!</p>
 
   //extract headers from object for the table head
-  const headers = object.keys(data[0]);
+  const headers = Object.keys(data[0]);
   //helpers to safely display nested cells
 
   const formCell = (value) =>{
@@ -20,7 +20,7 @@ const Table = ({ data }) => {
       <table>
         <thead>
           <tr>
-            {headers.map((header, idx)(
+            {headers.map((header, idx)=>(
               <th key={idx}>{header}</th>
             ))}
           </tr>
