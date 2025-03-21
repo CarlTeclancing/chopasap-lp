@@ -2,20 +2,29 @@ import React, { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 
 const Table = ({ data }) => {
+
+  //getting page location
   const location = useLocation();
+
+  //setting current page for the pagination and setting items per page for the table
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
 
+  //this line retuns no data available if no data is found
   if (!data || data.length === 0) return <p>No Data Available!</p>;
 
+  //setting the header for the table
   const headers = Object.keys(data[0]);
 
+  //getting form cell data
   const formCell = (value) => {
     if (typeof value === "object" && value !== null) {
       return JSON.stringify(value);
     }
     return value;
   };
+
+  //getting values to display per page for the form for pagination
 
   const totalPages = Math.ceil(data.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
