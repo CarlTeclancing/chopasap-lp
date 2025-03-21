@@ -7,8 +7,10 @@ const Stores = () => {
 
   return (
     <div className="container-dashboard">
-      <h3>Store Management</h3>
-      <Table data={stores} />
+      <div className="orders-dashboard">
+        <Table data={stores} />
+      </div>
+      
     </div>
   );
 };
