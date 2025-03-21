@@ -355,3 +355,20 @@ tr:nth-child(odd){
     flex-direction: row;
     justify-content: space-between;
 }
+.pagination-controls{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.btn-sec{
+    border: 1px solid #FFAC0C;
+    height: 42px;
+    background-color: none;
+    background: none;
+    width: 100px;
+    border-radius: 6px;
+    
+    color: #FFAC0C;
+}
