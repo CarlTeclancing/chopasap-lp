@@ -58,7 +58,7 @@ const Table = ({ data }) => {
                 {headers.map((key, j) => (
                   <td key={j}>
                     <Link
-                      to={`${location.pathname}/${row.id}`}
+                      to={`${location.pathname}?id=${row.id}`}
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
                       {formCell(row[key])}
