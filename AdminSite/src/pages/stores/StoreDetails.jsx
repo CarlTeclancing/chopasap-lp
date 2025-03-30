@@ -1,16 +1,50 @@
 import resto from '../../assets/resto.png'
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import image from '../../assets/image.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import Wallet from '../../assets/wallet.svg';
 import ArrowLeft from '../../assets/arrow-right.png';
-import DashboardLayout from '../../components/DashboardLayout';
+import { AppContext } from '../../context/AppContextProvider';
+import { deleteDocument } from '../../../firebase/crud';
+import { fireStoreCollections } from 'chop_asap_types';
 
 function StoreDetails() {
 
     const [activeTab, setActiveTab] = useState(1);
+    const [images, setImages] = useState([]);
+      const { users, products, storeOrders, stores, removeItemWithId} = useContext(AppContext);
+      if (!Array.isArray(stores)) {
+        return null
+      }
+      const nav = useNavigate()
+      const {id} = useParams()
+      const store = stores.find(item=>item.id === id)
+      const owner = users.find(item=>item.id === store.owner)
+      const storeProductsList = products.filter(item=> store.products?.some(id=>item.id === id))
+      const storeOrdersList = storeOrders.filter(item=> store.orders?.some(id=>item.id === id))
+      
+   
+      const deleteStore = ()=>{
+        const confirmed  =  confirm("Are you sure you want to delet this store??")
+      confirmed && deleteDocument(fireStoreCollections.StoreCollection, id).then(()=>{
+          nav("/stores")
+          alert("Deleted")
+      }).catch(e=>{
+          console.log(e);  
+          alert("Unable to delete")
+      })
+      }
 
+      useEffect(()=>{
 
+      },[])
+      
+      // Do same to get products, orders, owner's wallet, private and public details 
+      if (!store || !owner) {
+        return null
+      }
+    //   console.log(store);
+      
   return (
     
 
@@ -18,20 +52,28 @@ function StoreDetails() {
     
         <div className="container-dashaord">
                 {/* attarch variableto display store name in the place of chop asap */}
-                <h3>Store | Chop asap</h3>
+                <h3>Store | {store.name}</h3>
+                <div style={{display:'flex', gap:10}}>
+
+                <button>Edit</button>
+                <button onClick={deleteStore} >Delete</button>
+                <button>Mark as public</button>
+                </div>
+              
                 <div className="section">
                     <div className="row-main">
-                        <img src={resto} className='shop-img' alt="" />
+                        <img src={store.image} className='shop-img' alt="" style={{aspectRatio: 1}} />
                         <div className="row-l">
-                            <h4>Chop Asap</h4>
-                            <p className='text-left'>This is one of the best and oldest agency in Cameroon focusing on traveling from Yaoundé to bafoussam, yaounde to bamenda, bamenda to Yaoundé and all travels around the NWE, West Routs</p>
+                            <h4>{store.name}</h4>
+                            <p className='text-left'>{store.description}</p>
                             <div className="flex-row-a">
-                                <h6>Ballance <span className="active-a">2000</span></h6>
-                                <h6>Address <span className="active-a">Yaounde</span></h6>
+                                <h6>Address <span className="active-a">{store.address.city}</span></h6>
+                                <h6>Opens at <span className="active-a">{store.openHour}</span></h6>
+                                <h6>closeHour at <span className="active-a">{store.closeHour}</span></h6>
                             </div>
 
                             <div className="flex-row-a">
-                                <span className="active-a">133 Orders</span>
+                                <span className="active-a">{store.orders?.length} Orders</span>
                                 <span className="active-a">456k Revenue</span>
                             </div>
                         </div>
@@ -47,23 +89,28 @@ function StoreDetails() {
                     className={activeTab == 2?'tab-el-active':'tab-el'}>Orders</button>
                 <button
                     onClick={()=>setActiveTab(3)} 
-                    className={activeTab == 3?'tab-el-active':'tab-el'}>wallet & Transactions</button>
+                    className={activeTab == 3?'tab-el-active':'tab-el'}>Transactions</button>
                 <button
                     onClick={()=>setActiveTab(4)} 
-                    className={activeTab == 4?'tab-el-active':'tab-el'}>User Account</button>
+                    className={activeTab == 4?'tab-el-active':'tab-el'}>Accessories</button>
+                <button
+                    onClick={()=>setActiveTab(5)} 
+                    className={activeTab == 5?'tab-el-active':'tab-el'}>Owner Account</button>
             </div>
 
 
 
             <div className={activeTab==1?"products-container":"none"}>
-                <div className="product">
-                    <img src={resto} className='product-img' alt="" />
-                    <div className="product-details">
-                        <h4>Product Name</h4>
-                        <p>Product Description</p>
-                        <h6>Price: 2000</h6>
-                    </div> 
-                </div>
+                {
+                    storeProductsList.map((item)=>{
+                        return  <div className="product">
+                                <img src={item.image} className='product-img' alt="" />
+                                <div className="product-details">
+                                    <h4>{item.name}</h4>
+                                </div> 
+                            </div>
+                    })
+                }
                 </div>
 
                 <div className={activeTab ==2?"orders-container":"none"}>
@@ -71,8 +118,7 @@ function StoreDetails() {
                     <table className='table'>
                     <tr>
                         <th>Order ID</th>
-                        <th>Product</th>
-                        <th>Price</th>
+                        <th>No Product</th>
                         <th>User Name</th>
                         <th>Number</th>
                         <th>Email</th>
@@ -80,43 +126,48 @@ function StoreDetails() {
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
+                    {
+                        storeOrdersList.map(item=>
+                       {
+                        const buyer = users.find(user=>user.id === item.buyerId)
+                        
+                        return(
+
                     <tr className='row-1'>
-                        <td className='c'>97593475779</td>
-                        <td>Achu with yello soup</td>
-                        <td>1500</td>
-                        <td>Yuven Carlson</td>
-                        <td>672765292</td>
-                        <td>info@crestlancing.com</td>
-                        <td><span className="active">Delivery</span></td>
-                        <td>Pending</td>
+                        <td className='c'>{item.id}</td>
+                        <td>{item.orders.length}</td>
+                        <td>{buyer.firstName}</td>
+                        <td>{buyer.phone}</td>
+                        <td>{buyer.email}</td>
+                        <td><span className="active">{item.delivery ? "Delivery" : "Reservation"}</span></td>
+                        <td>{item.status}</td>
                         {/* add function to change pending order to deliverd done manualy */}
                         <td>Manual Delivered</td>
                     </tr>
+                        )}
+                    )
+                    }
                     </table>    
                 </div>
 
-                <div className={activeTab ==4?"user-container":"none"}>
+                <div className={activeTab ==5?"user-container":"none"}>
 
                     <table className='table'>
                     <tr>
-                        <th>User Name</th>
+                        <th>First name</th>
+                        <th>Last name</th>
                         <th>Email</th>
                         <th>Number</th>
-                        <th>City</th>
-                        <th>Address</th>
-                        <th>Country</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
                     <tr className='row-1'>
-                        <td className='c'><img src={image}/>Chop Asap</td>
-                        <td>app@chopasap.com</td>
-                        <td>672765292</td>
-                        <td>Yaounde</td>
-                        <td>Yaounde Cameroon</td>
-                        <td>Cameroon</td>
+                    <td>{owner.firstName}</td>
+                    <td>{owner.lastName}</td>
+                        <td>{owner.email}</td>
+                        <td>{owner.phone}</td>
                         <td><span className="active">Verified</span></td>
-                        <td><Link to='/dashboard/stores/store-id='>View More</Link></td>
+                        <td><Link to={`/dashboard/users/${owner.id}`}>View More</Link></td>
                     </tr>
                     </table>    
                 </div>
@@ -128,7 +179,7 @@ function StoreDetails() {
                          </div>
 
                          <div className="row-200">
-                             <h3>0.00FCFA</h3>
+                             <h3>{owner.wallet.balance}FCFA</h3>
                              <img src={ArrowLeft} alt="" />
                          </div>
                         <button className='secondary-btn'>Edit Balance</button>
