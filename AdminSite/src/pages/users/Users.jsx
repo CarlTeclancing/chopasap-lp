@@ -1,9 +1,12 @@
 
+import { useContext } from 'react';
 import image from '../../assets/image.png'
 import DashboardLayout from '../../components/DashboardLayout';
 import Table from '../../components/TableComponent';
+import { AppContext } from '../../context/AppContextProvider';
 
 function Users() {
+  const {users} = useContext(AppContext)
   return (
     
       <div className="container-dashaord">
@@ -12,35 +15,34 @@ function Users() {
             <Table />
             <table className='table'>
               <tr>
-                <th>Store Name</th>
+                <th>first name</th>
+                <th>last name</th>
                 <th>Email</th>
-                <th>Number</th>
-                <th>City</th>
-                <th>Address</th>
-                <th>Country</th>
+                <th>Phone</th>
+                <th>Stores</th>
+                <th>Orders</th>
+                
                 <th>Balance</th>
                 <th>Status</th>
               </tr>
-              <tr className='row-1'>
-                <td className='c'><img src={image}/>Chop Asap</td>
-                <td>app@chopasap.com</td>
-                <td>672765292</td>
-                <td>Yaounde</td>
-                <td>Yaounde Cameroon</td>
-                <td>Cameroon</td>
-                <td>2300 cfa</td>
-                <td><span className="active">Verified</span></td>
+              {
+                users.map(item=>(
+              <tr key={item.id} className='row-1'>
+              
+                <td>{item.firstName}</td>
+                <td>{item.lastName}</td>
+                <td>{item.email}</td>
+                <td>{item.phone}</td>
+                <td>{item.stores?.length}</td>
+                <td>{item.storeOrders?.length}</td>
+                
+                <td>{item.wallet.balance} cfa</td>
+                <td><span className="active">Not Verified</span></td>
               </tr>
-              <tr className='row-2'>
-                <td className='c'><img src={image}/>Correct Chop</td>
-                <td>app@chopasap.com</td>
-                <td>672765292</td>
-                <td>Yaounde</td>
-                <td>Yaounde Cameroon</td>
-                <td>Cameroon</td>
-                <td>2300 cfa</td>
-                <td><span className="active">Verified</span></td>
-              </tr>
+                ))
+
+              }
+          
             </table>
 
           </div>
