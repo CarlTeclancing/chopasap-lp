@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 
-const Table = ({ data }) => {
+const Table = ({ data, imageKey }) => {
 
   //locaiton id state 
   const [id, setId ] = useState();
@@ -24,6 +24,10 @@ const Table = ({ data }) => {
     if (typeof value === "object" && value !== null) {
       return JSON.stringify(value);
     }
+    if (typeof value === "string" && value.startsWith("https://firebasestorage")) {
+      return <img src={value} width={80} height={80} />
+    }
+
     return value;
   };
 
@@ -49,7 +53,7 @@ const Table = ({ data }) => {
           <thead>
             <tr>
               {headers.map((header, idx) => (
-                <th key={idx}>{header}</th>
+                <th key={idx} style={{textTransform: "capitalize"}} >{header}</th>
               ))}
             </tr>
           </thead>
@@ -60,13 +64,19 @@ const Table = ({ data }) => {
                 {headers.map((key, j) => (
                   <td key={j}>
                     <Link
+<<<<<<< HEAD
                       to={`${location.pathname}/${row.id}`}
                       onClick={()=>setId(row.id)}
                       state={id}
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
+=======
+                    to={`${location.pathname}/${row.id}`}
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+>>>>>>> 38cfc0cf60b0ef5c4d44fb98cab1c7a7278395ec
                       {formCell(row[key])}
-                    </Link>
+                </Link>
                   </td>
                 ))}
               </tr>

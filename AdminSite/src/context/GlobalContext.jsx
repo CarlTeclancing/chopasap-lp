@@ -4,10 +4,12 @@ import AgentsContextProvider from './AgentsContextProvider';
 import StoreContextProvider from './StoreContextProvider';
 import UserContextProvider from './userContextProvider';
 import TransactionContextProvider from './TransactionContextProvider';
+import AppContextProvider from './AppContextProvider';
 
 function GlobalContext({children}) {
   return (
-    <UserContextProvider>
+      <UserContextProvider>
+        <AppContextProvider>
         <OrderContextProvider>
             <StoreContextProvider>
                 <TransactionContextProvider>
@@ -17,6 +19,7 @@ function GlobalContext({children}) {
                 </TransactionContextProvider>
             </StoreContextProvider>
         </OrderContextProvider>
+        </AppContextProvider>
     </UserContextProvider>
   )
 }
