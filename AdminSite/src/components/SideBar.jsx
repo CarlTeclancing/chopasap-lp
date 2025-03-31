@@ -16,6 +16,7 @@ import settings from '../assets/settings.png';
 function SideBar({ active }) {
 
     const location = useLocation()
+    let id;
     
 
     const [activeState, setActiveState] = useState(1);  // Fix the variable name here
@@ -35,7 +36,7 @@ function SideBar({ active }) {
 
             <Link
                 onClick={() => setActiveState(2)}
-                className={location.pathname === '/stores'? 'navigation-element-active' : 'navigation-element-disabled'}
+                className={(location.pathname === '/stores' || `stores/${id}`)? 'navigation-element-active' : 'navigation-element-disabled'}
                 to='/stores'>
                 <img src={category} alt="Home" />
                 <span>Stores</span>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 
-const Table = ({ data }) => {
+const TableWithNoLink = ({ data }) => {
 
   //locaiton id state 
   const [id, setId ] = useState();
@@ -59,14 +59,7 @@ const Table = ({ data }) => {
               <tr key={i} style={{ cursor: "pointer" }}>
                 {headers.map((key, j) => (
                   <td key={j}>
-                    <Link
-                      to={`${location.pathname}/${row.id}`}
-                      onClick={()=>setId(row.id)}
-                      state={id}
-                      style={{ textDecoration: "none", color: "inherit" }}
-                    >
                       {formCell(row[key])}
-                    </Link>
                   </td>
                 ))}
               </tr>
@@ -91,4 +84,4 @@ const Table = ({ data }) => {
   );
 };
 
-export default Table;
+export default TableWithNoLink;

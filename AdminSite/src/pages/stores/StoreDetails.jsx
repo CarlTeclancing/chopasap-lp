@@ -4,9 +4,12 @@ import image from '../../assets/image.png';
 import { Link } from 'react-router-dom';
 import Wallet from '../../assets/wallet.svg';
 import ArrowLeft from '../../assets/arrow-right.png';
-import DashboardLayout from '../../components/DashboardLayout';
+import Table from '../../components/TableComponent';
+import { orders } from '../../../db/data';
+import TableWithNoLink from '../../components/NoLinkTableComponent';
 
-function StoreDetails() {
+
+function StoreDetails( { id } ) {
 
     const [activeTab, setActiveTab] = useState(1);
 
@@ -18,7 +21,7 @@ function StoreDetails() {
     
         <div className="container-dashaord">
                 {/* attarch variableto display store name in the place of chop asap */}
-                <h3>Store | Chop asap</h3>
+                <h3>Store | Chop asap {id}</h3>
                 <div className="section">
                     <div className="row-main">
                         <img src={resto} className='shop-img' alt="" />
@@ -68,31 +71,7 @@ function StoreDetails() {
 
                 <div className={activeTab ==2?"orders-container":"none"}>
 
-                    <table className='table'>
-                    <tr>
-                        <th>Order ID</th>
-                        <th>Product</th>
-                        <th>Price</th>
-                        <th>User Name</th>
-                        <th>Number</th>
-                        <th>Email</th>
-                        <th>Order Type</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                    <tr className='row-1'>
-                        <td className='c'>97593475779</td>
-                        <td>Achu with yello soup</td>
-                        <td>1500</td>
-                        <td>Yuven Carlson</td>
-                        <td>672765292</td>
-                        <td>info@crestlancing.com</td>
-                        <td><span className="active">Delivery</span></td>
-                        <td>Pending</td>
-                        {/* add function to change pending order to deliverd done manualy */}
-                        <td>Manual Delivered</td>
-                    </tr>
-                    </table>    
+                    <TableWithNoLink data={orders} /> 
                 </div>
 
                 <div className={activeTab ==4?"user-container":"none"}>

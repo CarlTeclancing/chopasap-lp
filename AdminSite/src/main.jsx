@@ -22,6 +22,8 @@ import StoreDetails from './pages/stores/StoreDetails.jsx';
 import DashboardLayout from './components/DashboardLayout.jsx';
 import GlobalContext from './context/GlobalContext.jsx';
 
+let id;
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -38,7 +40,7 @@ createRoot(document.getElementById('root')).render(
             <Route path='users' element={<Users />} />
             <Route path='settings' element={<Settings />} />
             <Route path='support' element={<Support />} />
-            <Route path='stores/store-id=' element={<StoreDetails />} />
+            <Route path={`stores/:${id}`} element={<StoreDetails id={id} />} />
         </Route>
         
       </Routes>
