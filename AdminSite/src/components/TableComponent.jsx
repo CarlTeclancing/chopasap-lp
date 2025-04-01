@@ -64,17 +64,9 @@ const Table = ({ data, imageKey }) => {
                 {headers.map((key, j) => (
                   <td key={j}>
                     <Link
-<<<<<<< HEAD
-                      to={`${location.pathname}/${row.id}`}
-                      onClick={()=>setId(row.id)}
-                      state={id}
-                      style={{ textDecoration: "none", color: "inherit" }}
-                    >
-=======
                     to={`${location.pathname}/${row.id}`}
                     style={{ textDecoration: "none", color: "inherit" }}
                   >
->>>>>>> 38cfc0cf60b0ef5c4d44fb98cab1c7a7278395ec
                       {formCell(row[key])}
                 </Link>
                   </td>

@@ -46,10 +46,6 @@ createRoot(document.getElementById('root')).render(
             <Route path='users' element={<Users />} />
             <Route path='settings' element={<Settings />} />
             <Route path='support' element={<Support />} />
-<<<<<<< HEAD
-            <Route path={`stores/:${id}`} element={<StoreDetails id={id} />} />
-=======
->>>>>>> 38cfc0cf60b0ef5c4d44fb98cab1c7a7278395ec
         </Route>
         
       </Routes>

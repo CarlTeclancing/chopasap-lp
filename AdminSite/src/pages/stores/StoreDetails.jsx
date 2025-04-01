@@ -4,15 +4,9 @@ import image from '../../assets/image.png';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Wallet from '../../assets/wallet.svg';
 import ArrowLeft from '../../assets/arrow-right.png';
-<<<<<<< HEAD
-import Table from '../../components/TableComponent';
-import { orders } from '../../../db/data';
-import TableWithNoLink from '../../components/NoLinkTableComponent';
-=======
 import { AppContext } from '../../context/AppContextProvider';
 import { deleteDocument } from '../../../firebase/crud';
 import { fireStoreCollections } from 'chop_asap_types';
->>>>>>> 38cfc0cf60b0ef5c4d44fb98cab1c7a7278395ec
 
 
 function StoreDetails( { id } ) {
@@ -59,9 +53,6 @@ function StoreDetails( { id } ) {
     
         <div className="container-dashaord">
                 {/* attarch variableto display store name in the place of chop asap */}
-<<<<<<< HEAD
-                <h3>Store | Chop asap {id}</h3>
-=======
                 <h3>Store | {store.name}</h3>
                 <div style={{display:'flex', gap:10}}>
 
@@ -70,7 +61,6 @@ function StoreDetails( { id } ) {
                 <button>Mark as public</button>
                 </div>
               
->>>>>>> 38cfc0cf60b0ef5c4d44fb98cab1c7a7278395ec
                 <div className="section">
                     <div className="row-main">
                         <img src={store.image} className='shop-img' alt="" style={{aspectRatio: 1}} />
@@ -126,9 +116,6 @@ function StoreDetails( { id } ) {
 
                 <div className={activeTab ==2?"orders-container":"none"}>
 
-<<<<<<< HEAD
-                    <TableWithNoLink data={orders} /> 
-=======
                     <table className='table'>
                     <tr>
                         <th>Order ID</th>
@@ -162,7 +149,6 @@ function StoreDetails( { id } ) {
                     )
                     }
                     </table>    
->>>>>>> 38cfc0cf60b0ef5c4d44fb98cab1c7a7278395ec
                 </div>
 
                 <div className={activeTab ==5?"user-container":"none"}>
