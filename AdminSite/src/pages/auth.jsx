@@ -17,7 +17,7 @@ function AuthPage() {
     })
   },[])
   return (<>
-    <form style={{display:"flex", flexDirection:"column" ,gap:19}} onSubmit={(e)=>{
+    <form className='auth-form' onSubmit={(e)=>{
       e.preventDefault()
       console.log(email);
       
@@ -28,18 +28,18 @@ function AuthPage() {
         
       })
     }}>
-        <div>
+        <div className='form-container'>
             <label>Email</label>
-            <input value={email} type='email' onChange={(e)=>{
+            <input className='input' value={email} type='email' onChange={(e)=>{
               setEmail(e.currentTarget.value)
             }} />
         </div>
       
         <div>
-           <button type="submit">Get Code</button>
+           <button className='btn-sec' type="submit">Get Code</button>
         </div>
     </form>
-    <form style={{display:"flex", flexDirection:"column" ,gap:19}} onSubmit={(e)=>{
+    <form className='auth-form' onSubmit={(e)=>{
       e.preventDefault()
       console.log(id.current);
       
@@ -51,14 +51,14 @@ function AuthPage() {
       })
     }}>
       
-        <div>
+        <div className='form-container'>
             <label value={email}  >Code</label>
             <input  onChange={(e)=>{
               setCode(e.currentTarget.value)
             }} />
         </div>
         <div>
-           <button type="submit">Login</button>
+           <button className='btn-primary' type="submit">Login</button>
         </div>
     </form>
   </>

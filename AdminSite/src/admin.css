@@ -155,10 +155,10 @@ table{
 .table{
     width: 100%;
     margin-top: 32px;
-    background-color: white;
+    background-color: #F4FCFF;
+    border: 1px solid rgb(185, 185, 185);
     border-radius: 6px;
     padding: 24px;
-    border: none;
     outline: none;
 }
 th, td{
@@ -171,10 +171,12 @@ th, td{
 tr:nth-child(even){
     background-color: #FFF7E7;
     padding-left: 12px;
+    border-bottom: 1px solid black;
 }
 tr:nth-child(odd){
     background-color: #F4FCFF;
     padding-left: 12px;
+    border-bottom: 1px solid black;
 }
 .c{
     display: flex;
@@ -369,6 +371,16 @@ tr:nth-child(odd){
     background: none;
     width: 100px;
     border-radius: 6px;
-    
+    cursor: pointer;
     color: #FFAC0C;
+}
+.btn-primary{
+    border: 1px solid #D2202F;
+    height: 42px;
+    background-color: none;
+    background: none;
+    width: 100px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #D2202F;
 }

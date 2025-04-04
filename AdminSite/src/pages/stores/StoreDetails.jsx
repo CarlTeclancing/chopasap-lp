@@ -9,7 +9,7 @@ import { deleteDocument } from '../../../firebase/crud';
 import { fireStoreCollections } from 'chop_asap_types';
 
 
-function StoreDetails( { id } ) {
+function StoreDetails(  ) {
 
     const [activeTab, setActiveTab] = useState(1);
     const [images, setImages] = useState([]);

@@ -23,7 +23,7 @@ function Users() {
                 <th>Orders</th>
                 
                 <th>Balance</th>
-                <th>Status</th>
+                
               </tr>
               {
                 users.map(item=>(
@@ -37,7 +37,7 @@ function Users() {
                 <td>{item.storeOrders?.length}</td>
                 
                 <td>{item.wallet.balance} cfa</td>
-                <td><span className="active">Not Verified</span></td>
+                
               </tr>
                 ))
 

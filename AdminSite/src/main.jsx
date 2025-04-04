@@ -10,6 +10,7 @@ import {
 import './App.css';
 import './media.css';
 import './admin.css'
+import './auth.css'
 import Dashbaord from './pages/index.jsx';
 import Stores from './pages/stores/Stores.jsx';
 import Users from './pages/users/Users.jsx';
