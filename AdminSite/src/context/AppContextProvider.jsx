@@ -45,6 +45,9 @@ function AppContextProvider({children}) {
         listAll(fireStoreCollections.StoreOrdersCollection).then(res=>{
             setstoreOrders(res)
         })
+        listAll(fireStoreCollections.TransactionCollection).then(res=>{
+            setTransactions(res)
+        })
         listAll(fireStoreCollections.UserPrivateCollection).then(res=>{
             let usersRes = [...res]
             console.log({private:res});
@@ -72,7 +75,7 @@ function AppContextProvider({children}) {
     },[user])
 
   return (
-   <AppContext.Provider value={{stores, products, users, storeOrders, removeItemWithId}}>
+   <AppContext.Provider value={{stores, transactions, products, users, storeOrders, removeItemWithId}}>
         {children}
    </AppContext.Provider>
   )

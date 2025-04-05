@@ -276,6 +276,8 @@ tr:nth-child(odd){
 .products-container{
     margin-top: 24px;
     width: 90%;
+    display: flex;
+    flex-wrap: wrap;
 }
 .orders-container{
     margin-top: 24px;
@@ -283,12 +285,23 @@ tr:nth-child(odd){
 }
 .product{
     width: 300px;
-    background-color:#ffae0c16;
+    height: 300px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#ffffff;
     border-radius: 12px;
     overflow: hidden;
+    margin: 12px;
+    border: 1px solid gray;
 }
 .product-img{
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
 
 }
 .user-container{

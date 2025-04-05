@@ -2,9 +2,11 @@
 import Wallet from '../../assets/wallet.svg';
 import ArrowLeft from '../../assets/arrow-right.png';
 import image from '../../assets/image.png';
-import DashboardLayout from '../../components/DashboardLayout';
+import React, { useContext } from 'react';
+import { AppContext } from '../../context/AppContextProvider';
 
 function Transactions() {
+        const { transactions } = useContext(AppContext); // ✅ use the context, not the provider
   return (
     
         <div className="row-fluid">
@@ -57,19 +59,28 @@ function Transactions() {
 
                      <table className='table'>
                     <tr>
-                        <th>Transaction ID</th>
-                        <th>Status</th>
+                        <th>Ref</th>
                         <th>Amount</th>
-                        <th>Trasaction Type</th>
-                        <th>Reference</th>
+                        <th>USer</th>
+                        <th>Profit</th>
+                        <th>Status</th>
+                        <th>Time</th>
+                        <th>Type</th>
                     </tr>
-                    <tr className='row-1'>
-                        <td className='c'><img src={image}/>808130482094</td>
-                        <td>success</td>
-                        <td>2000</td>
-                        <td>Withdrawal</td>
-                        <td>237 672765292 </td>
-                    </tr>
+                    {
+                        transactions.map(item=>(
+                            <tr>
+                                <td><img src={image}/></td>
+                                <td>{item.amount}</td>
+                                <td>{item.payer}</td>
+                                <td>{item.profit}</td>
+                                <td>{item.status}</td>
+                                <td>{item.time}</td>
+                                <td>{item.type}</td>
+                            </tr>
+                        ))
+                    }
+ 
                     </table> 
                      
 
