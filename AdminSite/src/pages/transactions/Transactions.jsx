@@ -4,6 +4,7 @@ import ArrowLeft from '../../assets/arrow-right.png';
 import image from '../../assets/image.png';
 import React, { useContext } from 'react';
 import { AppContext } from '../../context/AppContextProvider';
+import TableWithNoLink from '../../components/NoLinkTableComponent';
 
 function Transactions() {
         const { transactions } = useContext(AppContext); // ✅ use the context, not the provider
@@ -57,7 +58,7 @@ function Transactions() {
               </div>
                      <h3 className='h3'>Recent Transactions</h3>
 
-                     <table className='table'>
+                     {/* <table className='table'>
                     <tr>
                         <th>Ref</th>
                         <th>Amount</th>
@@ -80,8 +81,12 @@ function Transactions() {
                             </tr>
                         ))
                     }
+
+
  
-                    </table> 
+                    </table>  */}
+
+                    <TableWithNoLink data={transactions} />
                      
 
                  </div>

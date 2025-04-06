@@ -11,7 +11,7 @@ const TableWithNoLink = ({ data }) => {
 
   //setting current page for the pagination and setting items per page for the table
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5;
+  const itemsPerPage = 10;
 
   //this line retuns no data available if no data is found
   if (!data || data.length === 0) return <p>No Data Available!</p>;
