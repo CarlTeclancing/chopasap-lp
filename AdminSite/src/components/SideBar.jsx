@@ -36,7 +36,7 @@ function SideBar({ active }) {
 
             <Link
                 onClick={() => setActiveState(2)}
-                className={(location.pathname === '/stores' || `stores/${id}`)? 'navigation-element-active' : 'navigation-element-disabled'}
+                className={(location.pathname === '/stores')? 'navigation-element-active' : 'navigation-element-disabled'}
                 to='/stores'>
                 <img src={category} alt="Home" />
                 <span>Stores</span>
