@@ -18,7 +18,7 @@ import Agents from './pages/Agents/Agents.jsx';
 import Transactions from './pages/transactions/Transactions.jsx';
 import Orders from './pages/orders/Orders.jsx';
 import Settings from './pages/settings/Settings.jsx';
-import Support from './pages/support/support.jsx';
+import Support from './pages/support/Support.jsx';
 import StoreDetails from './pages/stores/StoreDetails.jsx';
 import DashboardLayout from './components/DashboardLayout.jsx';
 import GlobalContext from './context/GlobalContext.jsx';
